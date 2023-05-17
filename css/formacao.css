@@ -1,0 +1,114 @@
+.formacao-container {
+  max-width: 1500px;
+  padding: 120px 20px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+
+.formacao-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("/img/detalhe.svg");
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.formacao {
+  background: #141414;
+}
+
+.formacao .subtitulo {
+  color: #000000;
+  max-width: 5ch;
+}
+
+.formacao-texto {
+  font-size: 1.5rem;
+  max-width: 40ch;
+  line-height: 1.33;
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.formacao-extra {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  line-height: 1.4;
+  position: relative;
+  width: 300px;
+  flex: 1;
+  background: #000000;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.formacao-extra::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#ef0808, #67dd0a);
+  position: absolute;
+  left: -9px;
+}
+
+.formacao-extra h3 {
+  font-size: 0.875rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("/img/formacao/cursos.svg") no-repeat center center;
+}
+
+.idioma h3::before {
+  background: url("/img/formacao/idiomas.svg");
+}
+
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.formacao-extra span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo {
+    color: #ffffff;
+  }
+
+  .formacao-texto {
+    font-size: 1.5rem;
+  }
+}
